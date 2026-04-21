@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2563eb" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Weather Now" />
+  <title>Weather Now PWA</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Hey There</h1>
+    <p>Select a city to get started</p>
+  </header>
+
+  <main class="container">
+    <section class="card controls">
+      <label for="citySelect"><h1>I'm in:</h1></label>
+      <select id="citySelect">
+        <option value="36.8840,-85.7025">Summer Shade, KY</option>
+        <option value="36.9959,-85.9119">Glasgow, KY</option>
+        <option value="36.9685,-86.4808">Bowling Green, KY</option>
+        <option value="38.0406,-84.5037">Lexington, KY</option>
+        <option value="38.2542,-85.7594">Lousville, KY</option>
+        <option value="36.5501,-85.5052">Celina, TN</option>
+        <option value="35.9523,-86.6694">Nolensville, TN</option>
+        <option value="36.1627,-86.7816">Nashville, TN</option>
+        <option value="35.7904,-83.5637">Pigeon Forge, TN</option>
+        <option value="30.3935,-86.4958">Destin, FL</option>
+        <option value="40.5489,-84.5702">Celina, OH</option>
+      </select>
+      <button id="loadWeatherBtn">View live weather</button>
+    </section>
+
+    <section class="card weather-card">
+      <h2>Live Forecast</h2>
+      <div id="statusMessage">Select a city to load a live forecast.</div>
+      <div id="weatherResult" class="weather-result" hidden>
+        <p><strong>Temperature:</strong> <span id="temp"></span>°F</p>
+        <p><strong>Wind Speed:</strong> <span id="wind"></span>mph</p>
+        <p><strong>Weather:</strong> <span id="code"></span></p>
+        <p><strong>Time:</strong> <span id="time"></span></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
